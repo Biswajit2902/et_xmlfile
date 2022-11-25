@@ -5,8 +5,8 @@ from __future__ import absolute_import
 
 
 from contextlib import contextmanager
-# commented becuase of vulnerability issue in amazon lambda
-# from xml.etree.ElementTree import Element, tostring
+# commented becuase of vulnerability issue in amazon lambda (changed by Biswajit Satapathy)
+# from xml.etree.ElementTree import Element, tostring 
 from defusedxml.ElementTree import Element, tostring
 
 
