@@ -23,10 +23,6 @@ class Element:
     def remove(self, subelement: 'Element') -> None: ...
 
 
-class ElementTree(ET):
-    def getroot(self) -> Element: ... 
-
-
 class LxmlSyntaxError(Exception):
     pass
 
