@@ -5,9 +5,26 @@ from __future__ import absolute_import
 
 
 from contextlib import contextmanager
-# commented becuase of vulnerability issue in amazon lambda (changed by Biswajit Satapathy)
-# from xml.etree.ElementTree import Element, tostring 
-from defusedxml.ElementTree import Element, tostring
+# commented becuase of vulnerability issue in amazon lambda
+# from xml.etree.ElementTree import Element, tostring
+from defusedxml.ElementTree import tostring
+from typing import Dict
+from defusedxml import ElementTree as ET
+
+
+class Element:
+    tag: str
+    attrib: Dict[str, str]
+    text: str
+    tail: str
+
+    def find(self, path: str, namespaces: Dict[str, str] = None) -> 'Element': ...
+    def append(self, subelement: 'Element') -> None: ...
+    def remove(self, subelement: 'Element') -> None: ...
+
+
+class ElementTree(ET):
+    def getroot(self) -> Element: ... 
 
 
 class LxmlSyntaxError(Exception):
