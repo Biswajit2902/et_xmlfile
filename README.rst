@@ -15,7 +15,7 @@ The code was not developed with performance in mind but turned out to be faster 
 
 Note (changes):
 ------------------
- - removed usage of xml.etree, used defusedxml instead (changes done by biswajit, feel free to contact `Biswajit<https://github.com/Biswajit2902>`_)
+ - removed usage of xml.etree, used defusedxml instead (changes done by biswajit, feel free to contact `Biswajit <https://github.com/Biswajit2902>`_)
 
 Disclaimer:
 ------------------
