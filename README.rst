@@ -14,8 +14,10 @@ Note on performance
 The code was not developed with performance in mind but turned out to be faster than the existing SAX-based implementation but is significantly slower than lxml's xmlfile. There is one area where an optimisation for lxml will negatively affect the performance of et_xmfile and that is when using the `.element()` method on an xmlfile context manager. It is, therefore, recommended not to use this, though the method is provided for code compatibility.
 
 Note (changes):
- - removed usage of xml.etree, used defusedxml instead (changes done by biswajit, feel free to contact biswajit2902)
+------------------
+ - removed usage of xml.etree, used defusedxml instead (changes done by biswajit, feel free to contact `Biswajit<https://github.com/Biswajit2902>`_)
 
 Disclaimer:
+------------------
  - I hearby declare that, the code is taken from https://pypi.org/project/et-xmlfile/ . changed for experimental try.
  i do not claim publish anything officially. Please feel free to talk to me, if you have any question.    
